@@ -118,6 +118,13 @@ imgLabEnemy = [
 
 
 pygame.mixer.init()
+bgmForest= pygame.mixer.Sound("music/bgm/forest.wav")
+bgmShaft= pygame.mixer.Sound("music/bgm/shaft.wav")
+bgmTown= pygame.mixer.Sound("music/bgm/town.wav")
+bgmLib= pygame.mixer.Sound("music/bgm/lib.wav")
+bgmLab= pygame.mixer.Sound("music/bgm/lab.wav")
+
+
 sfxForestEnemy = [
     pygame.mixer.Sound( "music/monster_sfx/forest/wolf.wav"),
     pygame.mixer.Sound( "music/monster_sfx/forest/ghost.wav"),
@@ -579,38 +586,48 @@ def middleimage(): #계층 구분
             screen.blit(pygame.transform.scale(imgForest, (880, 720)), (0, 0))
             draw_text(screen, "절망의 숲", 250, 560, font,WHITE)
             pygame.display.update()
+            bgmForest.play(-1)
             pygame.time.wait(2000)
             image_displayed = False
     if floor == 5:
         if  image_displayed:
+            bgmForest.stop()
             screen.blit(pygame.transform.scale(imgShaft, (880, 720)), (0, 0))
             draw_text(screen, "고통의 갱도", 250, 560, font,WHITE)
             pygame.display.update()
+            bgmShaft.play(-1)
             pygame.time.wait(2000)
             image_displayed = False
     if floor == 10:
         if  image_displayed:
+            bgmShaft.stop()
             screen.blit(pygame.transform.scale(imgTown, (880, 720)), (0, 0))
             draw_text(screen, "부패의 마을", 250, 560, font,WHITE)
             pygame.display.update()
+            bgmTown.play(-1)
             pygame.time.wait(2000)
             image_displayed = False            
     if floor == 15:
         if  image_displayed:
+            bgmTown.stop()
             screen.blit(pygame.transform.scale(imgLib, (880, 720)), (0, 0))
             draw_text(screen, "망각의 도서관", 250, 560, font,WHITE)
             pygame.display.update()
+            bgmLib.play(-1)
             pygame.time.wait(2000)
             image_displayed = False            
     if floor == 20:
         if  image_displayed:
+            bgmLib.stop()
             screen.blit(pygame.transform.scale(imgLab, (880, 720)), (0, 0))
             draw_text(screen, "마력의 실험실", 250, 560, font,WHITE)
             pygame.display.update()
+            bgmLab.play(-1)
             pygame.time.wait(2000)
             image_displayed = False            
     if floor == 25:
         if  image_displayed:
+            bgmLab.stop()
             screen.blit(pygame.transform.scale(imgHeart, (880, 720)), (0, 0))
             draw_text(screen, "어둠의 심장", 250, 560, font,WHITE)
             pygame.display.update()
