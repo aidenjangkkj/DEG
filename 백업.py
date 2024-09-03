@@ -117,8 +117,42 @@ imgLabEnemy = [
     ]
 
 
-
-
+pygame.mixer.init()
+sfxForestEnemy = [
+    pygame.mixer.Sound( "music/monster_sfx/forest/wolf.wav"),
+    pygame.mixer.Sound( "music/monster_sfx/forest/ghost.wav"),
+    pygame.mixer.Sound( "music/monster_sfx/forest/fairy.wav"),
+    pygame.mixer.Sound( "music/monster_sfx/forest/spider.wav"),
+    pygame.mixer.Sound( "music/monster_sfx/forest/forest_golem.wav")
+]
+sfxShaftEnemy = [
+    pygame.mixer.Sound( "music/monster_sfx/shaft/miner.wav"),
+    pygame.mixer.Sound( "music/monster_sfx/shaft/stone_golem.wav"),
+    pygame.mixer.Sound( "music/monster_sfx/shaft/ghost_miner.wav"),
+    pygame.mixer.Sound( "music/monster_sfx/shaft/cave_bat.wav"),
+    pygame.mixer.Sound( "music/monster_sfx/shaft/pain_beast.wav")
+]
+sfxTownEnemy = [
+    pygame.mixer.Sound( "music/monster_sfx/town/corrupted_human.wav"),
+    pygame.mixer.Sound( "music/monster_sfx/town/death_witch.wav"),
+    pygame.mixer.Sound( "music/monster_sfx/town/farmer.wav"),
+    pygame.mixer.Sound( "music/monster_sfx/town/death_knight.wav"),
+    pygame.mixer.Sound( "music/monster_sfx/town/dark_hound.wav")
+]
+sfxLibEnemy = [
+    pygame.mixer.Sound( "music/monster_sfx/lib/flying_book.wav"),
+    pygame.mixer.Sound( "music/monster_sfx/lib/guardian.wav"),
+    pygame.mixer.Sound( "music/monster_sfx/lib/ghost_of_magician.wav"),
+    pygame.mixer.Sound( "music/monster_sfx/lib/book_of_darkness.wav"),
+    pygame.mixer.Sound( "music/monster_sfx/lib/guardian.wav")
+]
+sfxLabEnemy = [
+    pygame.mixer.Sound( "music/monster_sfx/lab/creature.wav"),
+    pygame.mixer.Sound( "music/monster_sfx/lab/magic_creature.wav"),
+    pygame.mixer.Sound( "music/monster_sfx/lab/guardian.wav"),
+    pygame.mixer.Sound( "music/monster_sfx/lab/bat_of_darkness.wav"),
+    pygame.mixer.Sound( "music/monster_sfx/lab/arcane_golem.wav")
+]
 
 
 
@@ -153,6 +187,8 @@ imgEffect = [
     pygame.image.load("image/effect_b.png")
 ]
 font_path = "font/kodia.ttf"
+
+
 # 변수 선언
 speed = 1
 idx = 0
@@ -423,26 +459,31 @@ def draw_para(bg, fnt):  # 주인공 능력 표시
     draw_text(bg, str(blazegem), X + 266, Y + 33, fnt, WHITE)
 
 def init_battle():  # 전투 시작 준비
-    global imgEnemy, emy_name, emy_lifemax, emy_life, emy_str, emy_x, emy_y
+    global imgEnemy, emy_name, emy_lifemax, emy_life, emy_str, emy_x, emy_y, sfxEnemy
     typ = random.randint(1, 5)
     if 1 <= floor <= 5:
         lev = random.randint(1, floor)
+        sfxEnemy = sfxForestEnemy[typ-1].play()
         imgEnemy = pygame.transform.scale(pygame.image.load("image/monster/forest/monster" + str(typ) + ".png"), (175, 230))
         emy_name = FOREST_EMY_NAME[typ-1] + " LV" + str(lev)
     elif 6 <= floor <= 10:
         lev = random.randint(6, floor)
+        sfxEnemy = sfxShaftEnemy[typ-1].play()
         imgEnemy = pygame.transform.scale(pygame.image.load("image/monster/shaft/monster" + str(typ) + ".png"), (175, 230))
         emy_name = SHAFT_EMY_NAME[typ] + " LV" + str(lev)
     elif 11 <= floor <= 15:
         lev = random.randint(11, floor)
+        sfxEnemy = sfxTownEnemy[typ-1].play()
         imgEnemy = pygame.transform.scale(pygame.image.load("image/monster/town/monster" + str(typ) + ".png"), (175, 230))
         emy_name = TOWN_EMY_NAME[typ] + " LV" + str(lev)
     elif 16 <= floor <= 20:
         lev = random.randint(16, floor)
+        sfxEnemy = sfxLibEnemy[typ-1].play()
         imgEnemy = pygame.transform.scale(pygame.image.load("image/monster/lib/monster" + str(typ) + ".png"), (175, 230))
         emy_name = LIB_EMY_NAME[typ] + " LV" + str(lev)
     elif 21 <= floor <= 25:
         lev = random.randint(21, floor)
+        sfxEnemy = sfxLabEnemy[typ-1].play()
         imgEnemy = pygame.transform.scale(pygame.image.load("image/monster/lab/monster" + str(typ) + ".png"), (175, 230))
         emy_name = LAB_EMY_NAME[typ] + " LV" + str(lev)
 
