@@ -496,7 +496,7 @@ def put_event():  # 길에 이벤트 배치
             dungeon[y][x] = 3
             break
     # 보물 상자와 누에고치 배치
-    for i in range(60):
+    for i in range(30):
         x = random.randint(3, DUNGEON_W - 4)
         y = random.randint(3, DUNGEON_H - 4)
         if (dungeon[y][x] == 0):
@@ -521,7 +521,7 @@ def move_player(key):  # 주인공 이동
         if treasure == 1:
             blazegem = blazegem + 1
         if treasure == 2:
-            food = int(food / 2)
+            food = int(food + 50)
         idx = 3
         tmr = 0
         return
