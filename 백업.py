@@ -65,15 +65,51 @@ imgLabWall=pygame.image.load("image/tile/lab/wall.png")
 imgLabWall2=pygame.image.load("image/tile/lab/wall2.png")
 
 
-imgHeartFloor=[
-    pygame.image.load("image/tile/heart/floor.png"),
+imgFrostFloor=[
+    pygame.image.load("image/tile/frost/floor.png"),
     pygame.image.load("image/tbox.png"),
     pygame.image.load("image/cocoon.png"),
     pygame.image.load("image/stairs.png")
     ]
-imgHeartWall=pygame.image.load("image/tile/heart/wall.png")
-imgHeartWall2=pygame.image.load("image/tile/heart/wall2.png")
+imgFrostWall=pygame.image.load("image/tile/frost/wall.png")
+imgFrostWall2=pygame.image.load("image/tile/frost/wall2.png")
 
+
+imgFlameFloor=[
+    pygame.image.load("image/tile/flame/floor.png"),
+    pygame.image.load("image/tbox.png"),
+    pygame.image.load("image/cocoon.png"),
+    pygame.image.load("image/stairs.png")
+    ]
+imgFlameWall=pygame.image.load("image/tile/flame/wall.png")
+imgFlameWall2=pygame.image.load("image/tile/flame/wall2.png")
+
+imgDarkFloor=[
+    pygame.image.load("image/tile/dark/floor.png"),
+    pygame.image.load("image/tbox.png"),
+    pygame.image.load("image/cocoon.png"),
+    pygame.image.load("image/stairs.png")
+    ]
+imgDarkWall=pygame.image.load("image/tile/dark/wall.png")
+imgDarkWall2=pygame.image.load("image/tile/dark/wall2.png")
+
+imgTimeFloor=[
+    pygame.image.load("image/tile/time/floor.png"),
+    pygame.image.load("image/tbox.png"),
+    pygame.image.load("image/cocoon.png"),
+    pygame.image.load("image/stairs.png")
+    ]
+imgTimeWall=pygame.image.load("image/tile/time/wall.png")
+imgTimeWall2=pygame.image.load("image/tile/time/wall2.png")
+
+imgChaosFloor=[
+    pygame.image.load("image/tile/chaos/floor.png"),
+    pygame.image.load("image/tbox.png"),
+    pygame.image.load("image/cocoon.png"),
+    pygame.image.load("image/stairs.png")
+    ]
+imgChaosWall=pygame.image.load("image/tile/chaos/wall.png")
+imgChaosWall2=pygame.image.load("image/tile/chaos/wall2.png")
 
 imgTitle = pygame.image.load("image/title.png")
 imgDark = pygame.image.load("image/dark.png")
@@ -115,7 +151,41 @@ imgLabEnemy = [
     pygame.image.load("image/monster/lab/monster4.png"),
     pygame.image.load("image/monster/lab/monster5.png")
     ]
-
+imgFrostEnemy = [
+    pygame.image.load("image/monster/frost/monster1.png"),
+    pygame.image.load("image/monster/frost/monster2.png"),
+    pygame.image.load("image/monster/frost/monster3.png"),
+    pygame.image.load("image/monster/frost/monster4.png"),
+    pygame.image.load("image/monster/frost/monster5.png")
+    ]
+imgFlameEnemy = [
+    pygame.image.load("image/monster/flame/monster1.png"),
+    pygame.image.load("image/monster/flame/monster2.png"),
+    pygame.image.load("image/monster/flame/monster3.png"),
+    pygame.image.load("image/monster/flame/monster4.png"),
+    pygame.image.load("image/monster/flame/monster5.png")
+    ]
+imgDarkEnemy = [
+    pygame.image.load("image/monster/dark/monster1.png"),
+    pygame.image.load("image/monster/dark/monster2.png"),
+    pygame.image.load("image/monster/dark/monster3.png"),
+    pygame.image.load("image/monster/dark/monster4.png"),
+    pygame.image.load("image/monster/dark/monster5.png")
+    ]
+imgTimeEnemy = [
+    pygame.image.load("image/monster/time/monster1.png"),
+    pygame.image.load("image/monster/time/monster2.png"),
+    pygame.image.load("image/monster/time/monster3.png"),
+    pygame.image.load("image/monster/time/monster4.png"),
+    pygame.image.load("image/monster/time/monster5.png")
+    ]
+imgChaosEnemy = [
+    pygame.image.load("image/monster/chaos/monster1.png"),
+    pygame.image.load("image/monster/chaos/monster2.png"),
+    pygame.image.load("image/monster/chaos/monster3.png"),
+    pygame.image.load("image/monster/chaos/monster4.png"),
+    pygame.image.load("image/monster/chaos/monster5.png")
+    ]
 
 pygame.mixer.init()
 bgmForest= pygame.mixer.Sound("music/bgm/forest.wav")
@@ -123,6 +193,12 @@ bgmShaft= pygame.mixer.Sound("music/bgm/shaft.wav")
 bgmTown= pygame.mixer.Sound("music/bgm/town.wav")
 bgmLib= pygame.mixer.Sound("music/bgm/lib.wav")
 bgmLab= pygame.mixer.Sound("music/bgm/lab.wav")
+bgmFrost= pygame.mixer.Sound("music/bgm/frost.wav")
+bgmFlame= pygame.mixer.Sound("music/bgm/flame.wav")
+bgmDark= pygame.mixer.Sound("music/bgm/dark.wav")
+bgmTime= pygame.mixer.Sound("music/bgm/time.wav")
+bgmChaos= pygame.mixer.Sound("music/bgm/chaos.wav")
+
 
 
 sfxForestEnemy = [
@@ -160,6 +236,41 @@ sfxLabEnemy = [
     pygame.mixer.Sound( "music/monster_sfx/lab/bat_of_darkness.wav"),
     pygame.mixer.Sound( "music/monster_sfx/lab/arcane_golem.wav")
 ]
+sfxFrostEnemy = [
+    pygame.mixer.Sound( "music/monster_sfx/frost/wolf.wav"),
+    pygame.mixer.Sound( "music/monster_sfx/frost/sprit.wav"),
+    pygame.mixer.Sound( "music/monster_sfx/frost/spider.wav"),
+    pygame.mixer.Sound( "music/monster_sfx/frost/golem.wav"),
+    pygame.mixer.Sound( "music/monster_sfx/frost/drake.wav")
+]
+sfxFlameEnemy = [
+    pygame.mixer.Sound( "music/monster_sfx/flame/lion.wav"),
+    pygame.mixer.Sound( "music/monster_sfx/flame/sprit.wav"),
+    pygame.mixer.Sound( "music/monster_sfx/flame/spider.wav"),
+    pygame.mixer.Sound( "music/monster_sfx/flame/golem.wav"),
+    pygame.mixer.Sound( "music/monster_sfx/flame/knight.wav")
+]
+sfxDarkEnemy = [
+    pygame.mixer.Sound( "music/monster_sfx/dark/cultist.wav"),
+    pygame.mixer.Sound( "music/monster_sfx/dark/demon.wav"),
+    pygame.mixer.Sound( "music/monster_sfx/dark/sprit.wav"),
+    pygame.mixer.Sound( "music/monster_sfx/dark/guardian.wav"),
+    pygame.mixer.Sound( "music/monster_sfx/dark/lord.wav")
+]
+sfxTimeEnemy = [
+    pygame.mixer.Sound( "music/monster_sfx/time/watcher.wav"),
+    pygame.mixer.Sound( "music/monster_sfx/time/wraith.wav"),
+    pygame.mixer.Sound( "music/monster_sfx/time/sprit.wav"),
+    pygame.mixer.Sound( "music/monster_sfx/time/Soldier.wav"),
+    pygame.mixer.Sound( "music/monster_sfx/time/lord.wav")
+]
+sfxChaosEnemy = [
+    pygame.mixer.Sound( "music/monster_sfx/chaos/Disciple.wav"),
+    pygame.mixer.Sound( "music/monster_sfx/chaos/beast.wav"),
+    pygame.mixer.Sound( "music/monster_sfx/chaos/sprit.wav"),
+    pygame.mixer.Sound( "music/monster_sfx/chaos/knight.wav"),
+    pygame.mixer.Sound( "music/monster_sfx/chaos/lord.wav")
+]
 
 
 
@@ -170,7 +281,11 @@ imgShaft = pygame.image.load("image/background/shaft.png")
 imgTown = pygame.image.load("image/background/town.png")
 imgLib = pygame.image.load("image/background/lib.png")
 imgLab = pygame.image.load("image/background/lab.png")
-imgHeart = pygame.image.load("image/background/heart.png")
+imgFrost = pygame.image.load("image/background/frost.png")
+imgFlame = pygame.image.load("image/background/flame.png")
+imgDark = pygame.image.load("image/background/dark.png")
+imgTime = pygame.image.load("image/background/time.png")
+imgChaos = pygame.image.load("image/background/chaos.png")
 imgItem = [
     pygame.image.load("image/potion.png"),
     pygame.image.load("image/blaze_gem.png"),
@@ -254,6 +369,15 @@ LIB_EMY_NAME = [
 LAB_EMY_NAME = [
     "변이 생물", "마법 실험체", "실험실 수호자", "변형된 박쥐", "마력의 골렘"
 ]
+FROST_EMY_NAME = ["얼음 늑대","서리 정령","얼어붙은 거미","빙하 골렘","서리 드레이크"]
+
+FLAME_EMY_NAME = ["화염의 사자","불길의 정령","용암 거미","화염 골렘","불의 기사"]
+
+DARK_EMY_NAME = ["어둠의 신도","어둠의 악마","어둠의 정령","어둠의 수호자","어둠의 군주"]
+
+TIME_EMY_NAME = ["시간의 감시자","시간의 망령","시공의 정령","시간의 병사","시간의 군주"]
+
+CHAOS_EMY_NAME =["혼돈의 추종자", "혼돈의 사자","혼돈의 정령","혼돈의 기사","혼돈의 군주"]
 
 
 MAZE_W = 11
@@ -318,19 +442,26 @@ def make_dungeon():  # 던전 자동 생성
 
 def draw_dungeon(bg, fnt):  # 던전 표시
     global floor, pl_x, pl_y, pl_a, dungeon
-    if 0 < floor < 5:
+    if 0 < floor < 10:
         draw_floor(bg, fnt, imgForestFloor, imgForestWall, imgForestWall2)
-    elif 5 <= floor < 10:
+    elif 10 <= floor < 20:
         draw_floor(bg, fnt, imgShaftFloor, imgShaftWall, imgShaftWall2)
-    elif 10 <= floor < 15:
+    elif 20 <= floor < 30:
         draw_floor(bg, fnt, imgTownFloor, imgTownWall, imgTownWall2)
-    elif 15 <= floor < 20:
+    elif 30 <= floor < 40:
         draw_floor(bg, fnt, imgLibFloor, imgLibWall, imgLibWall2)
-    elif 20 <= floor < 25:
+    elif 40 <= floor < 50:
         draw_floor(bg, fnt, imgLabFloor, imgLabWall, imgLabWall2)
-    elif 25 <= floor:
-        draw_floor(bg, fnt, imgHeartFloor, imgHeartWall, imgHeartWall2)
-
+    elif 50 <= floor < 60:
+        draw_floor(bg, fnt, imgFrostFloor, imgFrostWall, imgFrostWall2)
+    elif 60 <= floor < 70:
+        draw_floor(bg, fnt, imgFlameFloor, imgFlameWall, imgFlameWall2)
+    elif 70 <= floor < 80:
+        draw_floor(bg, fnt, imgDarkFloor, imgDarkWall, imgDarkWall2)
+    elif 80 <= floor < 90:
+        draw_floor(bg, fnt, imgTimeFloor, imgTimeWall, imgTimeWall2)    
+    elif 90 <= floor < 100:
+        draw_floor(bg, fnt, imgChaosFloor, imgChaosWall, imgChaosWall2)
 
 def draw_floor(bg, fnt, floor_img, wall_img, wall_img2):
     bg.fill(BLACK)
@@ -468,32 +599,56 @@ def draw_para(bg, fnt):  # 주인공 능력 표시
 def init_battle():  # 전투 시작 준비
     global imgEnemy, emy_name, emy_lifemax, emy_life, emy_str, emy_x, emy_y, sfxEnemy
     typ = random.randint(1, 5)
-    if 1 <= floor <= 5:
+    if 1 <= floor <= 9:
         lev = random.randint(1, floor)
         sfxEnemy = sfxForestEnemy[typ-1].play()
         imgEnemy = pygame.transform.scale(pygame.image.load("image/monster/forest/monster" + str(typ) + ".png"), (175, 230))
         emy_name = FOREST_EMY_NAME[typ-1] + " LV" + str(lev)
-    elif 6 <= floor <= 10:
-        lev = random.randint(6, floor)
+    elif 10 <= floor <= 19:
+        lev = random.randint(10, floor)
         sfxEnemy = sfxShaftEnemy[typ-1].play()
         imgEnemy = pygame.transform.scale(pygame.image.load("image/monster/shaft/monster" + str(typ) + ".png"), (175, 230))
         emy_name = SHAFT_EMY_NAME[typ] + " LV" + str(lev)
-    elif 11 <= floor <= 15:
-        lev = random.randint(11, floor)
+    elif 20 <= floor <= 29:
+        lev = random.randint(20, floor)
         sfxEnemy = sfxTownEnemy[typ-1].play()
         imgEnemy = pygame.transform.scale(pygame.image.load("image/monster/town/monster" + str(typ) + ".png"), (175, 230))
         emy_name = TOWN_EMY_NAME[typ] + " LV" + str(lev)
-    elif 16 <= floor <= 20:
-        lev = random.randint(16, floor)
+    elif 30 <= floor <= 39:
+        lev = random.randint(30, floor)
         sfxEnemy = sfxLibEnemy[typ-1].play()
         imgEnemy = pygame.transform.scale(pygame.image.load("image/monster/lib/monster" + str(typ) + ".png"), (175, 230))
         emy_name = LIB_EMY_NAME[typ] + " LV" + str(lev)
-    elif 21 <= floor <= 25:
-        lev = random.randint(21, floor)
+    elif 40 <= floor <= 49:
+        lev = random.randint(40, floor)
         sfxEnemy = sfxLabEnemy[typ-1].play()
         imgEnemy = pygame.transform.scale(pygame.image.load("image/monster/lab/monster" + str(typ) + ".png"), (175, 230))
         emy_name = LAB_EMY_NAME[typ] + " LV" + str(lev)
-
+    elif 50 <= floor <= 59:
+        lev = random.randint(50, floor)
+        sfxEnemy = sfxFrostEnemy[typ-1].play()
+        imgEnemy = pygame.transform.scale(pygame.image.load("image/monster/frost/monster" + str(typ) + ".png"), (175, 230))
+        emy_name = FROST_EMY_NAME[typ] + " LV" + str(lev)
+    elif 60 <= floor <= 69:
+        lev = random.randint(60, floor)
+        sfxEnemy = sfxFlameEnemy[typ-1].play()
+        imgEnemy = pygame.transform.scale(pygame.image.load("image/monster/flame/monster" + str(typ) + ".png"), (175, 230))
+        emy_name = FLAME_EMY_NAME[typ] + " LV" + str(lev)
+    elif 70 <= floor <= 79:
+        lev = random.randint(70, floor)
+        sfxEnemy = sfxDarkEnemy[typ-1].play()
+        imgEnemy = pygame.transform.scale(pygame.image.load("image/monster/dark/monster" + str(typ) + ".png"), (175, 230))
+        emy_name = DARK_EMY_NAME[typ] + " LV" + str(lev)
+    elif 80 <= floor <= 89:
+        lev = random.randint(80, floor)
+        sfxEnemy = sfxTimeEnemy[typ-1].play()
+        imgEnemy = pygame.transform.scale(pygame.image.load("image/monster/time/monster" + str(typ) + ".png"), (175, 230))
+        emy_name = TIME_EMY_NAME[typ] + " LV" + str(lev)
+    elif 90 <= floor <= 99:
+        lev = random.randint(90, floor)
+        sfxEnemy = sfxChaosEnemy[typ-1].play()
+        imgEnemy = pygame.transform.scale(pygame.image.load("image/monster/chaos/monster" + str(typ) + ".png"), (175, 230))
+        emy_name = CHAOS_EMY_NAME[typ] + " LV" + str(lev)
     
     emy_lifemax = 60 * (typ + 1) + (lev - 1) * 10
     emy_life = emy_lifemax
@@ -515,16 +670,27 @@ def draw_battle(bg, fnt):  # 전투 화면 표시
         dmg_eff = dmg_eff - 1
         bx = random.randint(-20, 20)
         by = random.randint(-10, 10)
-    if 1 <= floor <= 5:
+    if 1 <= floor <= 9:
         imgBtlBG = pygame.transform.scale(imgForest, (880, 720))
-    elif 6 <= floor <= 10:
+    elif 10 <= floor <= 19:
         imgBtlBG = pygame.transform.scale(imgShaft, (880, 720))
-    elif 11 <= floor <= 15:
+    elif 20 <= floor <= 29:
         imgBtlBG = pygame.transform.scale(imgTown, (880, 720))
-    elif 16 <= floor <= 20:
+    elif 30 <= floor <= 39:
         imgBtlBG = pygame.transform.scale(imgLib, (880, 720))
-    elif 21 <= floor <= 25:
+    elif 40 <= floor <= 49:
         imgBtlBG = pygame.transform.scale(imgLab, (880, 720))
+    elif 50 <= floor <= 59:
+        imgBtlBG = pygame.transform.scale(imgFrost, (880, 720))
+    elif 60 <= floor <= 69:
+        imgBtlBG = pygame.transform.scale(imgFlame, (880, 720))
+    elif 70 <= floor <= 79:
+        imgBtlBG = pygame.transform.scale(imgDark, (880, 720))
+    elif 80 <= floor <= 89:
+        imgBtlBG = pygame.transform.scale(imgTime, (880, 720))
+    elif 90 <= floor <= 99:
+        imgBtlBG = pygame.transform.scale(imgChaos, (880, 720))
+    
     bg.blit(imgBtlBG, [bx, by])
     if emy_life > 0 and emy_blink % 2 == 0:
         bg.blit(imgEnemy, [emy_x, emy_y + emy_step])
@@ -589,7 +755,7 @@ def middleimage(): #계층 구분
             bgmForest.play(-1)
             pygame.time.wait(2000)
             image_displayed = False
-    if floor == 5:
+    if floor == 10:
         if  image_displayed:
             bgmForest.stop()
             screen.blit(pygame.transform.scale(imgShaft, (880, 720)), (0, 0))
@@ -598,7 +764,7 @@ def middleimage(): #계층 구분
             bgmShaft.play(-1)
             pygame.time.wait(2000)
             image_displayed = False
-    if floor == 10:
+    if floor == 20:
         if  image_displayed:
             bgmShaft.stop()
             screen.blit(pygame.transform.scale(imgTown, (880, 720)), (0, 0))
@@ -607,7 +773,7 @@ def middleimage(): #계층 구분
             bgmTown.play(-1)
             pygame.time.wait(2000)
             image_displayed = False            
-    if floor == 15:
+    if floor == 30:
         if  image_displayed:
             bgmTown.stop()
             screen.blit(pygame.transform.scale(imgLib, (880, 720)), (0, 0))
@@ -616,7 +782,7 @@ def middleimage(): #계층 구분
             bgmLib.play(-1)
             pygame.time.wait(2000)
             image_displayed = False            
-    if floor == 20:
+    if floor == 40:
         if  image_displayed:
             bgmLib.stop()
             screen.blit(pygame.transform.scale(imgLab, (880, 720)), (0, 0))
@@ -625,12 +791,49 @@ def middleimage(): #계층 구분
             bgmLab.play(-1)
             pygame.time.wait(2000)
             image_displayed = False            
-    if floor == 25:
+    if floor == 50:
         if  image_displayed:
             bgmLab.stop()
-            screen.blit(pygame.transform.scale(imgHeart, (880, 720)), (0, 0))
-            draw_text(screen, "어둠의 심장", 250, 560, font,WHITE)
+            screen.blit(pygame.transform.scale(imgFrost, (880, 720)), (0, 0))
+            draw_text(screen, "서리 동굴", 250, 560, font,WHITE)
             pygame.display.update()
+            bgmFrost.play(-1)
+            pygame.time.wait(2000)
+            image_displayed = False   
+    if floor == 60:
+        if  image_displayed:
+            bgmFrost.stop()
+            screen.blit(pygame.transform.scale(imgFlame, (880, 720)), (0, 0))
+            draw_text(screen, "화염의 제단", 250, 560, font,WHITE)
+            pygame.display.update()
+            bgmFlame.play(-1)
+            pygame.time.wait(2000)
+            image_displayed = False   
+    if floor == 70:
+        if  image_displayed:
+            bgmFlame.stop()
+            screen.blit(pygame.transform.scale(imgDark, (880, 720)), (0, 0))
+            draw_text(screen, "어둠의 성소", 250, 560, font,WHITE)
+            pygame.display.update()
+            bgmDark.play(-1)
+            pygame.time.wait(2000)
+            image_displayed = False   
+    if floor == 80:
+        if  image_displayed:
+            bgmDark.stop()
+            screen.blit(pygame.transform.scale(imgTime, (880, 720)), (0, 0))
+            draw_text(screen, "초월한 시간", 250, 560, font,WHITE)
+            pygame.display.update()
+            bgmTime.play(-1)
+            pygame.time.wait(2000)
+            image_displayed = False   
+    if floor == 90:
+        if  image_displayed:
+            bgmTime.stop()
+            screen.blit(pygame.transform.scale(imgChaos, (880, 720)), (0, 0))
+            draw_text(screen, "혼돈의 차원", 250, 560, font,WHITE)
+            pygame.display.update()
+            bgmChaos.play(-1)
             pygame.time.wait(2000)
             image_displayed = False            
 
@@ -653,12 +856,38 @@ def display_text():
         pygame.display.update()
         pygame.time.wait(8000)
         once = False
+def emy_pattern(emy_dmg, stunState, emy_life):
+    random_number = random.randint(1, 4)
+    if random_number == 1:
+        set_message("일반 공격!")
+        set_message(str(emy_dmg) + "pts of damage!")
+        return emy_dmg, stunState, emy_life
+    
+    elif random_number == 2:
+        emy_dmg = emy_dmg * 2
+        set_message("강타!")
+        set_message(str(emy_dmg) + "pts of damage!")
+        return emy_dmg, stunState, emy_life
+    
+    elif random_number == 3:
+        set_message("회복!")
+        set_message(str(emy_dmg) + "pts of heal!")
+        emy_life = emy_life + emy_dmg
+        return emy_dmg, stunState, emy_life
+    
+    elif random_number == 4:  
+        set_message("기절!")
+        emy_dmg = emy_dmg / 2
+        stunState = True
+        return emy_dmg, stunState, emy_life
+
 
 def main():  # 메인 처리
     global speed, idx, tmr, floor, fl_max, welcome
-    global pl_a, pl_lifemax, pl_life, pl_str, food, potion, blazegem
-    global emy_life, emy_step, emy_blink, dmg_eff
-    dmg = 0
+    global pl_a, pl_lifemax, pl_life, pl_str,pl_dmg, food, potion, blazegem
+    global emy_life, emy_step, emy_blink, dmg_eff, emy_dmg
+    global stunState
+    stunState=False
     lif_p = 0
     str_p = 0
 
@@ -803,14 +1032,14 @@ def main():  # 메인 처리
             draw_battle(screen, fontS)
             if tmr == 1:
                 set_message("You attack!")
-                dmg = pl_str + random.randint(0, 9)
+                pl_dmg = pl_str + random.randint(0, 9)
             if 2 <= tmr and tmr <= 4:
                 screen.blit(imgEffect[0], [700 - tmr * 120, -100 + tmr * 120])
             if tmr == 5:
                 emy_blink = 5
-                set_message(str(dmg) + "pts of damage!")
+                set_message(str(pl_dmg) + "pts of damage!")
             if tmr == 11:
-                emy_life = emy_life - dmg
+                emy_life = emy_life - pl_dmg
                 if emy_life <= 0:
                     emy_life = 0
                     idx = 16
@@ -827,19 +1056,32 @@ def main():  # 메인 처리
                 set_message(emy_name + " attack!")
                 emy_step = 30
             if tmr == 9:
-                dmg = emy_str + random.randint(0, 9)
-                set_message(str(dmg) + "pts of damage!")
+                emy_dmg = emy_str + random.randint(0, 9)
+                emy_dmg, stunState, emy_life=emy_pattern(emy_dmg,stunState,emy_life)
+                set_message(str(stunState))
                 dmg_eff = 5
                 emy_step = 0
+
             if tmr == 15:
-                pl_life = pl_life - dmg
+                pl_life = pl_life - emy_dmg
                 if pl_life < 0:
                     pl_life = 0
                     idx = 15
                     tmr = 0
-            if tmr == 20:
+                set_message(str(stunState))
+
+            if (tmr == 20 and stunState):
+                idx = 13
+                tmr = 0
+                set_message(str(idx))
+                stunState = False
+
+            if (tmr == 20 and not stunState):
                 idx = 11
                 tmr = 0
+                set_message(str(idx))
+
+
 
         elif idx == 14:  # 도망 가능한가?
             draw_battle(screen, fontS)
