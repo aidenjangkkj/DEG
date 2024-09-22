@@ -17,8 +17,8 @@ BLINK = [(224, 255, 255), (192, 240, 255), (128, 224, 255), (64, 192, 255), (128
 # 이미지 로딩
 imgForestFloor=[
     pygame.image.load("image/tile/forest/floor.png"),
-    pygame.image.load("image/tbox.png"),
-    pygame.image.load("image/cocoon.png"),
+    pygame.image.load("image/tile/forest/tbox.png"),
+    pygame.image.load("image/tile/forest/cocoon.png"),
     pygame.image.load("image/stairs.png")
     ]
 imgForestWall=pygame.image.load("image/tile/forest/wall.png")
@@ -27,8 +27,8 @@ imgForestWall2=pygame.image.load("image/tile/forest/wall2.png")
 
 imgTownFloor=[
     pygame.image.load("image/tile/town/floor.png"),
-    pygame.image.load("image/tbox.png"),
-    pygame.image.load("image/cocoon.png"),
+    pygame.image.load("image/tile/town/tbox.png"),
+    pygame.image.load("image/tile/town/cocoon.png"),
     pygame.image.load("image/stairs.png")
     ]
 imgTownWall=pygame.image.load("image/tile/town/wall.png")
@@ -37,8 +37,8 @@ imgTownWall2=pygame.image.load("image/tile/town/wall2.png")
 
 imgShaftFloor=[
     pygame.image.load("image/tile/shaft/floor.png"),
-    pygame.image.load("image/tbox.png"),
-    pygame.image.load("image/cocoon.png"),
+    pygame.image.load("image/tile/shaft/tbox.png"),
+    pygame.image.load("image/tile/shaft/cocoon.png"),
     pygame.image.load("image/stairs.png")
     ]
 imgShaftWall=pygame.image.load("image/tile/shaft/wall.png")
@@ -47,8 +47,8 @@ imgShaftWall2=pygame.image.load("image/tile/shaft/wall2.png")
 
 imgLibFloor=[
     pygame.image.load("image/tile/lib/floor.png"),
-    pygame.image.load("image/tbox.png"),
-    pygame.image.load("image/cocoon.png"),
+    pygame.image.load("image/tile/lib/tbox.png"),
+    pygame.image.load("image/tile/lib/cocoon.png"),
     pygame.image.load("image/stairs.png")
     ]
 imgLibWall=pygame.image.load("image/tile/lib/wall.png")
@@ -57,8 +57,8 @@ imgLibWall2=pygame.image.load("image/tile/lib/wall2.png")
 
 imgLabFloor=[
     pygame.image.load("image/tile/lab/floor.png"),
-    pygame.image.load("image/tbox.png"),
-    pygame.image.load("image/cocoon.png"),
+    pygame.image.load("image/tile/lab/tbox.png"),
+    pygame.image.load("image/tile/lab/cocoon.png"),
     pygame.image.load("image/stairs.png")
     ]
 imgLabWall=pygame.image.load("image/tile/lab/wall.png")
@@ -67,8 +67,8 @@ imgLabWall2=pygame.image.load("image/tile/lab/wall2.png")
 
 imgFrostFloor=[
     pygame.image.load("image/tile/frost/floor.png"),
-    pygame.image.load("image/tbox.png"),
-    pygame.image.load("image/cocoon.png"),
+    pygame.image.load("image/tile/frost/tbox.png"),
+    pygame.image.load("image/tile/frost/cocoon.png"),
     pygame.image.load("image/stairs.png")
     ]
 imgFrostWall=pygame.image.load("image/tile/frost/wall.png")
@@ -77,8 +77,8 @@ imgFrostWall2=pygame.image.load("image/tile/frost/wall2.png")
 
 imgFlameFloor=[
     pygame.image.load("image/tile/flame/floor.png"),
-    pygame.image.load("image/tbox.png"),
-    pygame.image.load("image/cocoon.png"),
+    pygame.image.load("image/tile/flame/tbox.png"),
+    pygame.image.load("image/tile/flame/cocoon.png"),
     pygame.image.load("image/stairs.png")
     ]
 imgFlameWall=pygame.image.load("image/tile/flame/wall.png")
@@ -86,8 +86,8 @@ imgFlameWall2=pygame.image.load("image/tile/flame/wall2.png")
 
 imgDarkFloor=[
     pygame.image.load("image/tile/dark/floor.png"),
-    pygame.image.load("image/tbox.png"),
-    pygame.image.load("image/cocoon.png"),
+    pygame.image.load("image/tile/dark/tbox.png"),
+    pygame.image.load("image/tile/dark/cocoon.png"),
     pygame.image.load("image/stairs.png")
     ]
 imgDarkWall=pygame.image.load("image/tile/dark/wall.png")
@@ -95,8 +95,8 @@ imgDarkWall2=pygame.image.load("image/tile/dark/wall2.png")
 
 imgTimeFloor=[
     pygame.image.load("image/tile/time/floor.png"),
-    pygame.image.load("image/tbox.png"),
-    pygame.image.load("image/cocoon.png"),
+    pygame.image.load("image/tile/time/tbox.png"),
+    pygame.image.load("image/tile/time/cocoon.png"),
     pygame.image.load("image/stairs.png")
     ]
 imgTimeWall=pygame.image.load("image/tile/time/wall.png")
@@ -104,8 +104,8 @@ imgTimeWall2=pygame.image.load("image/tile/time/wall2.png")
 
 imgChaosFloor=[
     pygame.image.load("image/tile/chaos/floor.png"),
-    pygame.image.load("image/tbox.png"),
-    pygame.image.load("image/cocoon.png"),
+    pygame.image.load("image/tile/chaos/tbox.png"),
+    pygame.image.load("image/tile/chaos/cocoon.png"),
     pygame.image.load("image/stairs.png")
     ]
 imgChaosWall=pygame.image.load("image/tile/chaos/wall.png")
