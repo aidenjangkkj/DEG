@@ -943,13 +943,28 @@ def main():  # 메인 처리
     fontS = pygame.font.Font(font_path, 20)
     while True:
         for event in pygame.event.get():
+            if event.type == KEYDOWN:
+                if event.key == K_j:  # 'j' 키를 눌렀을 때 floor 변수를 증가
+                    floor += 1
+            if event.type == KEYDOWN:
+                if event.key == K_k:  # 'h' 키를 눌렀을 때 계단판정
+                    idx = 2
+                    tmr = 0
+            if event.type == KEYDOWN:
+                if event.key == K_h:  # 'h' 키를 눌렀을 때 floor 변수를 감소
+                    floor -= 1
+            if event.type == KEYDOWN:
+                if event.key == K_o:  # 'O' 키를 눌렀을 때 전투 블록 판정
+                    idx = 10
+                    tmr = 0
             if event.type == QUIT:
                 pygame.quit()
                 sys.exit()
+                
             if event.type == KEYDOWN:
-                if event.key == K_s:
+                if event.key == K_s: # 's' 키를 눌렀을 때 speed 변수를 증가 즉 게임 속도 업
                     speed = speed + 1
-                    if speed == 4:
+                    if speed == 4: 
                         speed = 1
         
 
