@@ -873,7 +873,7 @@ def middleimage(): #계층 구분
             bgmChaos.play(-1)
             pygame.time.wait(2000)
             image_displayed = False
-    if floor == 90:
+    if floor == 100:
         if  image_displayed:
             screen.blit(pygame.transform.scale(imgInfi, (880, 720)), (0, 0))
             draw_text(screen, "무한한 공간", 250, 560, font,WHITE)
@@ -1036,16 +1036,29 @@ def main():  # 메인 처리
             elif tmr <= 4:
                 bx = (4 - tmr) * 220
                 by = 0
-                if 1 <= floor <= 5:
+                if 1 <= floor <= 9:
                     imgBtlBG = pygame.transform.scale(imgForest, (880, 720))
-                elif 6 <= floor <= 10:
+                elif 10 <= floor <= 19:
                     imgBtlBG = pygame.transform.scale(imgShaft, (880, 720))
-                elif 11 <= floor <= 15:
+                elif 20 <= floor <= 29:
                     imgBtlBG = pygame.transform.scale(imgTown, (880, 720))
-                elif 16 <= floor <= 20:
+                elif 30 <= floor <= 39:
                     imgBtlBG = pygame.transform.scale(imgLib, (880, 720))
-                elif 21 <= floor <= 25:
+                elif 40 <= floor <= 49:
                     imgBtlBG = pygame.transform.scale(imgLab, (880, 720))
+                elif 50 <= floor <= 59:
+                    imgBtlBG = pygame.transform.scale(imgFrost, (880, 720))
+                elif 60 <= floor <= 69:
+                    imgBtlBG = pygame.transform.scale(imgFlame, (880, 720))
+                elif 70 <= floor <= 79:
+                    imgBtlBG = pygame.transform.scale(imgDark, (880, 720))
+                elif 80 <= floor <= 89:
+                    imgBtlBG = pygame.transform.scale(imgTime, (880, 720))
+                elif 90 <= floor <= 99:
+                    imgBtlBG = pygame.transform.scale(imgChaos, (880, 720))
+                elif 99 <= floor:
+                    imgBtlBG = pygame.transform.scale(imgInfi, (880, 720))     
+                
                 screen.blit(imgBtlBG, [bx, by])
                 draw_text(screen, "Encounter!", 350, 200, font, WHITE)
             elif tmr <= 16:
