@@ -1130,7 +1130,6 @@ def main():  # 메인 처리
             if tmr == 9:
                 emy_dmg = emy_str + random.randint(0, 9)
                 emy_dmg, stunState, emy_life=emy_pattern(emy_dmg,stunState,emy_life)
-                set_message(str(stunState))
                 dmg_eff = 5
                 emy_step = 0
 
@@ -1140,18 +1139,13 @@ def main():  # 메인 처리
                     pl_life = 0
                     idx = 15
                     tmr = 0
-                set_message(str(stunState))
-
             if (tmr == 20 and stunState):
                 idx = 13
                 tmr = 0
-                set_message(str(idx))
                 stunState = False
-
             if (tmr == 20 and not stunState):
                 idx = 11
                 tmr = 0
-                set_message(str(idx))
 
 
 
