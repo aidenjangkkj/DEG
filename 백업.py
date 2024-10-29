@@ -938,7 +938,7 @@ def main():  # 메인 처리
         for event in pygame.event.get():
             if event.type == KEYDOWN:
                 if event.key == K_j:  # 'j' 키를 눌렀을 때 floor 변수를 증가
-                    floor += 100
+                    floor += 1
             if event.type == KEYDOWN:
                 if event.key == K_k:  # 'h' 키를 눌렀을 때 계단판정
                     idx = 2
