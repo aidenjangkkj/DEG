@@ -311,11 +311,11 @@ imgChaos = pygame.image.load("image/background/chaos.png")
 imgInfi = pygame.image.load("image/background/infi.png")
 
 imgItem = [
-    pygame.image.load("image/potion.png"),
-    pygame.image.load("image/blaze_gem.png"),
-    pygame.image.load("image/spoiled.png"),
-    pygame.image.load("image/apple.png"),
-    pygame.image.load("image/meat.png")
+    pygame.image.load("image/item/potion.png"),
+    pygame.image.load("image/item/blaze_gem.png"),
+    pygame.image.load("image/item/spoiled.png"),
+    pygame.image.load("image/item/apple.png"),
+    pygame.image.load("image/item/meat.png")
 ]
 imgPlayer = [
     pygame.image.load("image/char/char0.png"),
@@ -377,7 +377,7 @@ text_lines = [
 ]
 
 COMMAND = ["[A] Attack", "[P]otion", "[B]laze gem", "[R]un"]
-TRE_NAME = ["Potion", "Blaze gem", "Food spoiled.", "Food +20", "Food +100"]
+TRE_NAME = ["Potion", "Blaze gem", "Food +50.", "Food +20", "Food +100"]
 FOREST_EMY_NAME = [
     "어둠의 늑대", "숲의 정령", "타락한 요정", "거미 군주", "숲의 골렘"
 ]
@@ -545,7 +545,7 @@ def move_player(key):  # 주인공 이동
 
     if dungeon[pl_y][pl_x] == 1:  # 보물상자에 닿음
         dungeon[pl_y][pl_x] = 0
-        treasure = random.choice([0, 0, 0, 1, 1, 1, 1, 1, 1, 2])
+        treasure = random.choice([0, 0, 0, 1, 1, 1, 2, 2, 2, 2])
         if treasure == 0:
             potion = potion + 1
         if treasure == 1:
@@ -557,16 +557,8 @@ def move_player(key):  # 주인공 이동
         return
     if dungeon[pl_y][pl_x] == 2:  # 누에고치에 닿음
         dungeon[pl_y][pl_x] = 0
-        r = random.randint(0, 99)
-        if r < 40:  # 식량
-            treasure = random.choice([3, 3, 3, 4])
-            if treasure == 3: food = food + 20
-            if treasure == 4: food = food + 100
-            idx = 3
-            tmr = 0
-        else:  # 적 출현
-            idx = 10
-            tmr = 0
+        idx = 10
+        tmr = 0
         return
     if dungeon[pl_y][pl_x] == 3:  # 계단에 닿음
         idx = 2
@@ -629,6 +621,7 @@ def draw_para(bg, fnt):  # 주인공 능력 표시
 def init_battle():  # 전투 시작 준비
     global imgEnemy, emy_name, emy_lifemax, emy_life, emy_str, emy_x, emy_y, sfxEnemy
     typ = random.randint(1, 5)
+    infityp = random.randint(1, 10)
     if 1 <= floor <= 9:
         lev = random.randint(1, floor)
         sfxEnemy = sfxForestEnemy[typ-1].play()
@@ -681,9 +674,9 @@ def init_battle():  # 전투 시작 준비
         emy_name = CHAOS_EMY_NAME[typ-1] + " LV" + str(lev)
     elif 100<= floor :
         lev = random.randint(100, floor)
-        sfxEnemy = sfxInfiEnemy[typ-1][typ-1].play()
-        imgEnemy = pygame.transform.scale(imgInfiEnemy[typ-1][typ-1], (175, 230))
-        emy_name = INFI_EMY_NAME[typ-1][typ-1] + " LV" + str(lev)
+        sfxEnemy = sfxInfiEnemy[infityp-1][typ-1].play()
+        imgEnemy = pygame.transform.scale(imgInfiEnemy[infityp-1][typ-1], (175, 230))
+        emy_name = INFI_EMY_NAME[infityp-1][typ-1] + " LV" + str(lev)
     
     emy_lifemax = 60 * (typ + 1) + (lev - 1) * 10
     emy_life = emy_lifemax
@@ -725,7 +718,7 @@ def draw_battle(bg, fnt):  # 전투 화면 표시
         imgBtlBG = pygame.transform.scale(imgTime, (880, 720))
     elif 90 <= floor <= 99:
         imgBtlBG = pygame.transform.scale(imgChaos, (880, 720))
-    elif 90 <= floor <= 99:
+    elif 100 <= floor:
         imgBtlBG = pygame.transform.scale(imgInfi, (880, 720))        
     
     bg.blit(imgBtlBG, [bx, by])
@@ -945,7 +938,7 @@ def main():  # 메인 처리
         for event in pygame.event.get():
             if event.type == KEYDOWN:
                 if event.key == K_j:  # 'j' 키를 눌렀을 때 floor 변수를 증가
-                    floor += 1
+                    floor += 100
             if event.type == KEYDOWN:
                 if event.key == K_k:  # 'h' 키를 눌렀을 때 계단판정
                     idx = 2
@@ -998,7 +991,7 @@ def main():  # 메인 처리
         elif idx == 1:  # 플레이어 이동
             move_player(key)
             draw_dungeon(screen, fontS)
-            draw_text(screen, "floor {} ({},{})".format(floor, pl_x, pl_y), 60, 40, fontS, WHITE)
+            draw_text(screen, "floor {} ({},{})".format(floor, pl_x, pl_y), 150, 40, fontS, WHITE)
             if welcome > 0:
                 welcome = welcome - 1
                 draw_text(screen, "Welcome to floor {}.".format(floor), 300, 180, font, CYAN)
